@@ -1,3 +1,9 @@
+// if (location.protocol === 'http:') {
+//     url = 'http://api.openweathermap.org/data/2.5/weather?lat=21.1682895&lon=-101.6723306&units=imperial&APPID=ec50a6072ac189dee111acdd3a38ab9f';
+//  } else {
+//     url = 'https://api.openweathermap.org/data/2.5/weather?lat=21.1682895&lon=-101.6723306&units=imperial&APPID=ec50a6072ac189dee111acdd3a38ab9f';
+//  }
+
 const iconElement = document.querySelector(".icon");
 const tempElement = document.querySelector(".temperature");
 const descElement = document.querySelector(".temperature-desc");
@@ -36,7 +42,7 @@ function showError(error){
 
 //  Getting Weather from API
 function getWeather(latitude,longitude){
-    let API = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    let API = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(API)
         .then(function(response){
